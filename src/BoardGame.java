@@ -10,5 +10,14 @@ public class BoardGame
         playerLocations = new LinkedHashMap<String, Location>();
     }
     
-    
+    public boolean addPlayer(String playerName, GamePiece gamePiece, Location initialLocation) {
+        if (playerPieces.containsKey(playerName) && playerLocations.containsKey(playerName)) {
+            return false;
+        }
+        else {
+            playerPieces.put("playerName", gamePiece);
+            playerLocations.put("playerName", initialLocation);
+            return true;
+        }
+    }
 }

@@ -9,5 +9,4 @@ public enum Location
     LIBRARY,  
     LOUNGE, 
     STUDY;
-
 }
