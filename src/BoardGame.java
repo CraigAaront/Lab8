@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 public class BoardGame 
@@ -56,5 +57,11 @@ public class BoardGame
         }
         
         return result;
+    }
+    public Location getPlayersLocation(String player) {
+        return playerLocations.get(player);
+    }
+    public ArrayList<String> getPlayersAtLocation(Location loc){
+        return null;
     }
 }
