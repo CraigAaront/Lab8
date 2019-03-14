@@ -20,11 +20,9 @@ public class BoardGame
             return true;
         }
     }
-    
     public GamePiece getPlayerGamePiece(String playerName) {
         return playerPieces.get("playerName");
     }
-    
     public String getPlayerWithGamePiece(GamePiece gamePiece) {
         for (String name: playerPieces.keySet()) {
             if(playerPieces.get(name).equals(gamePiece)) {
@@ -32,6 +30,9 @@ public class BoardGame
             }
         }
         return null;
-        
     }
+    public void movePlayer(String playerName, Location newLocation) {
+        playerLocations.put(playerName, newLocation);
+    }
+    
 }
