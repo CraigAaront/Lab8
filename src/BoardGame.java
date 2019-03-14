@@ -20,4 +20,10 @@ public class BoardGame
             return true;
         }
     }
+    
+    public GamePiece getPlayerGamePiece(String playerName) {
+        return playerPieces.get("playerName");
+    }
+    
+    public 
 }
