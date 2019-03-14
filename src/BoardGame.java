@@ -1,5 +1,4 @@
-
-public class BoardGame
+public class BoardGame 
 {
-
+    
 }
