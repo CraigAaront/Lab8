@@ -11,7 +11,7 @@ public class BoardGame
     }
     
     public boolean addPlayer(String playerName, GamePiece gamePiece, Location initialLocation) {
-        if (playerPieces.containsKey(playerName) && playerLocations.containsKey(playerName)) {
+        if (playerPieces.containsKey(playerName)) {
             return false;
         }
         else {
@@ -25,5 +25,13 @@ public class BoardGame
         return playerPieces.get("playerName");
     }
     
-    public 
+    public String getPlayerWithGamePiece(GamePiece gamePiece) {
+        for (String name: playerPieces.keySet()) {
+            if(playerPieces.get(name).equals(gamePiece)) {
+                return name;
+            }
+        }
+        return null;
+        
+    }
 }
