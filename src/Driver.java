@@ -33,6 +33,6 @@ public class Driver
     String[] returnedTwoMove = new String[2];
     returnedTwoMove = game.moveTwoPlayers(playerNames, locations);
     System.out.println(returnedTwoMove[0].toString() + " " + returnedTwoMove[1].toString());
-    
+        
     }
 }
