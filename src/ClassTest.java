@@ -1,10 +1,13 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 public class ClassTest
 {
+    @SuppressWarnings("deprecation")
     @Test
     public void BoardGameTest() {
         BoardGame game = new BoardGame();
@@ -43,6 +46,21 @@ public class ClassTest
         ArrayList<GamePiece> gams = new ArrayList<GamePiece>();
         gams.add(GamePiece.RED_RACER);
         Assert.assertEquals("GetgamepieceatLocation doesnt output correct arraylist", gams, game.getGamePiecesAtLocation(Location.LIBRARY));
+      
+        Set<String> playerSet = new HashSet<String>();
+        playerSet.add("joe");
+        playerSet.add("anthony");
+        Assert.assertEquals("getPlayers returns incorrect set", playerSet, game.getPlayers());
+        
+        Set<Location> locationSet = new HashSet<Location>();
+        locationSet.add(Location.LIBRARY);
+        locationSet.add(Location.HALL);
+        Assert.assertEquals("getLocations returns incorrect set", locationSet, game.getPlayerLocations());
+        
+        Set<GamePiece> pieceSet = new HashSet<GamePiece>();
+        pieceSet.add(GamePiece.RED_RACER);
+        pieceSet.add(GamePiece.BLUE_RACER);
+        Assert.assertEquals("getPlayerPieces returns incorrect set", pieceSet, game.getPlayerPieces());
         
     }  
 }
