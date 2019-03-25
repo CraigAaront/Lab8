@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -29,7 +31,18 @@ public class ClassTest
         results[0] = "joe";
         results[1] = "anthony";
         Assert.assertEquals("movetwoplayers didnt output correct array", results, game.moveTwoPlayers(names, loc));
-        Assert.assertEquals("movetwoplayers didnt move the players", Location.HALL, game.getPlayersLocation("joe"));
-    }
+        Assert.assertEquals("movetwoplayers didnt move the players", Location.HALL, game.getPlayersLocation("joe"));       
+        names[0] = "anthony";
+        names[1] = "joe";
+        Assert.assertEquals("movetwoplayers didnt output correct array", results, game.moveTwoPlayers(names, loc));
     
+        ArrayList<String> locs = new ArrayList<String>();
+        locs.add("joe");
+        Assert.assertEquals("getPlayersAtLocation doesnt output correct arraylist", locs, game.getPlayersAtLocation(Location.LIBRARY));
+        
+        ArrayList<GamePiece> gams = new ArrayList<GamePiece>();
+        gams.add(GamePiece.RED_RACER);
+        Assert.assertEquals("GetgamepieceatLocation doesnt output correct arraylist", gams, game.getGamePiecesAtLocation(Location.LIBRARY));
+        
+    }  
 }
